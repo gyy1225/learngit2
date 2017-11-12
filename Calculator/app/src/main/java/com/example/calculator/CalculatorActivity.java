@@ -89,13 +89,7 @@ public class CalculatorActivity extends AppCompatActivity {
         //数字输入
 
         for(int i=0;i<10;i++){
-          /*  buttonPoint.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    tv.setText(".");
-                    flag=6;
-                }
-            });*/
+         
         temp=getBtnForId(buttons[i]);
         temp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,12 +106,22 @@ public class CalculatorActivity extends AppCompatActivity {
             }
         });
         }
-        /*buttonBack.setOnClickListener(new View.OnClickListener() {
+         buttonPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                str1=
+                str1=str1+".";
+                tv.setText(str1);
             }
-        });*/
+        });
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                str1=tv.getText().toString().trim();
+                str1=str1.substring(0,str1.length()-1);
+                tv.setText(str1);
+            }
+        });
+
         buttonListener(buttonAdd,1);
         buttonListener(buttonMinus,2);
         buttonListener(buttonMulti,3);
