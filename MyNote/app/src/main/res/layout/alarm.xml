@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <Button
+            android:id="@+id/btn_delAlarm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/delete2"
+            android:layout_alignParentLeft="true"
+            android:textColor="#3c3c3c"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="设置提醒闹钟"
+            android:textColor="#3c3c3c"
+            android:textSize="25sp" />
+        <Button
+            android:id="@+id/btn_saveAlarm"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/save2"
+            android:textColor="#3c3c3c"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入设置的闹钟时间"/>
+
+
+</LinearLayout>
