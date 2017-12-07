@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/back"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+    <Button
+        android:id="@+id/btn_delSet"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/delete2"
+        android:textColor="#3c3c3c" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="更多设置"
+        android:textColor="#3c3c3c"
+        android:textSize="25sp"
+        android:id="@+id/textView" />
+    <Button
+        android:id="@+id/btn_saveSet"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:textColor="#3c3c3c"
+        android:background="@drawable/save2"/>
+</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置优先级:"
+        android:textColor="#3c3c3c"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="1-3" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置起始时间:"
+        android:textColor="#3c3c3c"
+        android:textSize="24sp"/>
+
+    <EditText
+        android:id="@+id/et_startTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="格式：****.**.**" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置截止时间:"
+        android:textColor="#3c3c3c"
+        android:textSize="24sp"/>
+    <EditText
+        android:id="@+id/et_endTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>
