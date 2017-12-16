@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_delAlarm"
+            android:layout_alignBottom="@+id/btn_delAlarm"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="设置提醒闹钟"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_delAlarm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/btn_saveAlarm"
+            android:layout_toStartOf="@+id/btn_saveAlarm"
+            android:background="@drawable/ic_delete_white_24dp"
+            android:textColor="#3c3c3c" />
+
+        <Button
+            android:id="@+id/btn_saveAlarm"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_save_white_24dp"
+            android:textColor="#3c3c3c" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/et_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="点击闹钟图标进行设置哦!"
+        android:textSize="20sp"/>
+
+
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_setAlarm"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_alarm_add_black_24dp"
+            android:textColor="#3c3c3c" />
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
