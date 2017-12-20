@@ -68,6 +68,18 @@ public class editNote extends AppCompatActivity{
         et_endTime = (EditText) findViewById(R.id.et_endTime);
         Bundle myBundle = this.getIntent().getExtras();
         enter_state = myBundle.getInt("enter_state");
+        if(enter_state==1){
+            String content2=myBundle.getString("content");
+            String date2=myBundle.getString("date");
+            String grade2=myBundle.getString("grade");
+            String startTime2=myBundle.getString("startTime");
+            String endTime2=myBundle.getString("endTime");
+            et_content.setText(content2);
+            tv_date.setText(date2);
+            et_grade.setText(grade2);
+            et_startTime.setText(startTime2);
+            et_endTime.setText(endTime2);
+        }
         /*last_content = myBundle.getString("info1");
         date=myBundle.getString("info2");
         grade=myBundle.getString("info3");
@@ -130,15 +142,20 @@ public class editNote extends AppCompatActivity{
                 }
                 //查看并修改当前备忘录
                 else {
-                    note notes = (note) DataSupport.findAll(note.class);
-                    String content2=notes.getContent();
-                    String date2=notes.getDate();
-                    String startTime2=notes.getStartTime();
-                    String endTime2=notes.getEndTime();
-                    et_content.setText(content2);
-                    tv_date.setText(date2);
-                    et_startTime.setText(startTime2);
-                    et_endTime.setText(endTime2);
+                    Date date = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                    String dateString = sdf.format(date);
+                    tv_date.setText(dateString);
+                    note note = new note();
+                    note.setContent(content);
+                    note.setDate(dateString);
+                    note.setGrade(grade);
+                    note.setStartTime(startTime);
+                    note.setEndTime(endTime);
+                    note.save();
+                    Toast.makeText(editNote.this, "修改成功", Toast.LENGTH_SHORT).show();
+                    Intent intent10=new Intent(editNote.this, MainActivity.class);
+                    startActivity(intent10);
                 }
                 break;
             case (R.id.btn_delete):

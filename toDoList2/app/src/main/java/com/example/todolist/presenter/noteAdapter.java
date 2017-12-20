@@ -63,11 +63,11 @@ public class noteAdapter extends RecyclerView.Adapter<noteAdapter.ViewHolder>{
                 note note=mNoteList.get(position);
                 Intent intent5=new Intent(mContext,editNote.class);
                 Bundle bundle = new Bundle();
-                /*bundle.putString("info1",note.getContent());
-                bundle.putString("info2",note.getDate());
-                bundle.putString("info3",note.getGrade());
-                bundle.putString("info4",note.getStartTime());
-                bundle.putString("info5",note.getEndTime());*/
+                bundle.putString("content",note.getContent());
+                bundle.putString("date",note.getDate());
+                bundle.putString("grade",note.getGrade());
+                bundle.putString("startTime",note.getStartTime());
+                bundle.putString("endTime",note.getEndTime());
                 bundle.putInt("enter_state", 1);
                 intent5.putExtras(bundle);
                 mContext.startActivity(intent5);

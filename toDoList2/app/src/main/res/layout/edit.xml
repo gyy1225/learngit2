@@ -18,12 +18,7 @@
         android:orientation="vertical"
         android:background="@color/colorAccent"
         android:padding="15dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="编辑备忘录"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"/>
+
         <TextView
             android:id="@+id/tv_date"
             android:layout_width="fill_parent"
